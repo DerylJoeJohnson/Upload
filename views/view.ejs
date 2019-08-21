@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>View</title>
+</head>
+<body>
+    <h1>The Books</h1>
+    <form action="/view" method="GET">
+    
+    <% for(var i=0;i<bookdata.length;i++){%>
+        <table>
+            <tr>
+                <td><h3>Book name</h3> </td>
+                <td><h3><%= bookdata[i].name%></h3></td>
+            </tr>
+            <tr>
+                <td>
+                        <img src="http://localhost:8000/view/<%= bookdata[i].file%>" alt="nature" height="300" width="300">
+                    
+                </td>
+            </tr>
+        </table>
+        <%}%>
+    </form>
+</body>
+</html>
